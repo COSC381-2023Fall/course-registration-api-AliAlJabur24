@@ -17,7 +17,6 @@ def get_courses(prefix: str):
 
 @app.get("/student_courses/{eid}")
 def get_student_courses(eid: str):
-    
     for student in students:
         if student.eid == eid:
             return student.get_registered_courses()
